@@ -1,0 +1,140 @@
+.nav ul {
+    position: fixed;
+    top: 57px;
+    right: 0;
+
+    height: 100%;
+    padding: 30px 15px;
+    transform: translateX(200%);
+    transition: transform 1s ease;
+    z-index: 2;
+
+    border-radius: 0 0 0 10%;
+
+    li {
+        text-align: center;
+
+        &:not(:first-child) {
+            margin: 30px 0 0 0;
+        }
+    }
+
+	.navLink {
+        color: var(--light);
+        padding: 5px 15px;
+        border: 1px solid #fff0;
+        border-radius: 20px;
+
+        font: {
+            size: 16px;
+            weight: 400;
+        }
+    }
+
+	.active {
+        padding: 5px 15px;
+        border: 1px solid var(--light);
+        border-radius: 20px;
+    }
+
+	&.visible {
+        transform: none;
+    }
+}
+
+.burgerNav {
+    position: relative;
+    display: block;
+
+    width: 30px;
+    height: 20px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    &::before,
+	&::after {
+        content: '';
+        position: absolute;
+        right: 0;
+
+        width: 100%;
+        height: 2px;
+
+        background: var(--light);
+        transition: transform 0.5s ease-in;
+    }
+
+	&::before {
+        top: 0;
+    }
+
+	&::after {
+        bottom: 0;
+    }
+
+	.burgerLine {
+        width: 100%;
+        height: 2px;
+
+        position: absolute;
+        right: 0;
+        top: 50%;
+
+        background: var(--light);
+        transform: translateY(-50%);
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+}
+
+.open {
+    .burgerLine {
+        opacity: 0;
+    }
+
+	&::before {
+        top: 10px;
+        transform: rotate(45deg);
+    }
+
+	&::after {
+        top: 10px;
+        transform: rotate(-45deg);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav ul {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        padding: 0;
+
+        display: flex;
+        transform: none;
+        background: transparent;
+
+        li {
+            &:not(:first-child) {
+                margin: 0 0 0 15px;
+            }
+        }
+
+		.navLink {
+            transition: border 0.5s ease-in-out;
+
+            &:hover {
+                border: 1px solid var(--light);
+            }
+        }
+    }
+
+	.burgerNav {
+        display: none;
+    }
+}

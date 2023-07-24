@@ -1,0 +1,44 @@
+:root {
+    --light: #fff;
+    --dark: #000;
+    --yel: #faff00;
+
+    --bg-light: #6d60ff;
+    --bg-dark: #09006e;
+
+    --dbg-light: #5f54db;
+    --dbg-dark: #070055;
+}
+
+body {
+    /* header light theme */
+	.header,
+	.nav ul {
+        background: var(--bg-light);
+    }
+
+	/* main, error dark theme */
+    .main,
+	.error {
+        background: var(--dbg-light);
+    }
+
+	&.dark {
+        /* header dark theme */
+		.header,
+		.nav ul {
+            background: var(--bg-dark);
+        }
+
+		/* main, error dark theme */
+        .main,
+		.error {
+            background: var(--dbg-dark);
+        }
+    }
+}
+
+.wrapper {
+    padding: 0 15px;
+    margin: 0 auto;
+}

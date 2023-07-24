@@ -1,0 +1,61 @@
+.main {
+    .mainBody {
+        display: grid;
+        gap: 15px;
+        padding: 100px 0;
+        color: var(--light);
+        
+        .helUser {
+            margin: 0;
+        }
+    
+        .aboutUser {
+            max-width: 270px;
+            font: {
+                size: 18px;
+            }
+            
+            span {
+                color: var(--yel);
+                text-decoration: underline;
+                font: {
+                    weight: 500;
+                }
+            }
+        }
+    
+        .deteilsUser {
+            p {
+                color: #8FFF00;
+            }
+        
+            a {
+                color: #f00;
+                border-bottom: 1px solid #f00;
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .main {
+        .mainBody {
+            .helUser {
+                animation: welUser infinite 5s linear;
+            }
+        }
+    }
+}
+
+@keyframes welUser {
+    0% {
+        transform: translate3d(0, -10px, 0);
+    }
+	50% {
+        transform: translate3d(0, 10px, 0);
+    }
+
+	100% {
+        transform: translate3d(0, -10px, 0);
+    }
+}

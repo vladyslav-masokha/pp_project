@@ -1,0 +1,19 @@
+.header {
+    .headerBody {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        
+        .time {
+            color: var(--light);
+            font: {
+                weight: 500;
+                size: 18px;
+                style: italic;
+            }
+        }
+    }
+}
+
+@import url('./Navigation.scss');

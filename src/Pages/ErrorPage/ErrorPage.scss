@@ -1,0 +1,22 @@
+.error {
+	min-height: 100vh;
+
+	.errorBody {
+		text-align: center;
+		padding: 60% 0 0;
+
+		h1 {
+			color: var(--yel);
+			margin: 0;
+			font: {
+				size: 4rem;
+				weight: 700;
+			}
+		}
+
+		h3 {
+			font-size: 1.5rem;
+			color: var(--light);
+		}
+	}
+}
